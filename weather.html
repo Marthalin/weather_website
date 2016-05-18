@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather</title>
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="mycss.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-6">
+      <!-- Large button group -->
+      <div class="btn-group">
+        <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" id="barTitle">
+          台北市 <span class="caret"></span>
+        </button>
+        <ul id="dropdown" class="dropdown-menu" role="menu">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">台北市</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">新北市</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">台中市</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">台南市</a></li>
+        </ul>
+      </div>
+      <div><span class="temperature"></span> &#8451;</div>
+    </div>
+    <div class="col-xs-6">
+      <canvas id="today" width="100" height="100"></canvas>
+      <div class="condition">
+          <span class="date" id="day0date">4 May 2015</span>
+          <span id="weatherCondition"></span>
+      </div>
+    </div
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Forecast</div>
+
+            <!-- Table -->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th id="day1date">5 May 2015</th>
+                  <th id="day2date">6 May 2015</th>
+                  <th id="day3date">7 May 2015</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="day1foretemp">17-23 &#8451;</td>
+                  <td id="day2foretemp">18-26 &#8451;</td>
+                  <td id="day3foretemp">15-24 &#8451;</td>
+                </tr>
+                <tr>
+                  <td><canvas id="day1icon" width="64" height="64">Clear</canvas></td>
+                  <td><canvas id="day2icon" width="64" height="64">Mostly Sunny</canvas></td>
+                  <td><canvas id="day3icon" width="64" height="64">Mostly Cloudy</canvas></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+  </div>
+  
+</div>
+
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+<script src="http://darkskyapp.github.io/skycons/skycons.js"></script>
+<script src="myapp.js"></script>
+</body>
+</html>
